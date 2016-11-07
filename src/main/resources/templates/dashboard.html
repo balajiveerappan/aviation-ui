@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Aviation</title>
+
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/aviations.css" />
+<link rel="stylesheet" href="/css/index.css" />
+
+
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/menu.js"></script>
+
+<style>
+.navbar {
+	margin-bottom: 0;
+	background-color: #01579B;
+	border: 0;
+	font-size: 11px !important;
+	letter-spacing: 4px;
+	font-weight: 600;
+	position: static;
+}
+
+#sample-img {
+	width: 59%;
+	border: 2px solid black;
+	-webkit-filter: grayscale(100%);
+}
+
+.style_hy {
+	font-size: 18px;
+	color: #00695C;
+	font-weight: 700;
+}
+
+.p_name {
+	font-size: 23px;
+	color: #283593;
+}
+
+.style_header {
+	font-size: 34px;
+	color: #283593;
+	font-weight: 700;
+}
+</style>
+
+</head>
+<body>
+
+	<!-- Top Logo Header -->
+	<nav id="home" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html">Aviation</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a class="dropdown-toggle"
+						data-toggle="dropdown" href="#">Menu <span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="Unit_Filter.html">Filter Editor</a></li>
+							<li><a href="Splash_Screen.html">Component Analysis</a></li>
+						</ul></li>
+					<li><a href="index.html" id="logout">LOGOUT</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- End of Top Logo Header -->
+
+	<div id="band" class="container text-center">
+		<h3 class="style_header ">Aviation Menu</h3>
+		<br></br>
+		<div class="row">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<p class="p_name">
+					<strong>History Details</strong>
+				</p>
+				<br></br> <a href="Splash_Screen.html"> <img
+					src="/img/Aviation.jpg" class="img-thumbnail person" id="sample-img"
+					alt="Random Name" />
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
