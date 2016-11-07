@@ -1,5 +1,8 @@
 package com.aviation.poc.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,9 +23,10 @@ public class AviationLoginController {
 	}
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public String loginView(@RequestParam("username") String username,@RequestParam("password") String password) {
+	public String loginView(@RequestParam("username") String username,@RequestParam("password") String password, HttpServletResponse response) {
 		boolean loginValidRes =  loginService.validateLogin(username, password);
 		if(loginValidRes){
+			//response.sendRedirect("http://localhost:8080/");
 			return "afterLogin";
 		}else{
 			return "login";
