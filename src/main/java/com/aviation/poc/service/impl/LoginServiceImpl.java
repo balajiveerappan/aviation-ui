@@ -16,7 +16,7 @@ public class LoginServiceImpl implements LoginService {
 	@Override
 	public boolean validateLogin(String username, String password) {
 		Login userInfo = loginRepository.findByUsername(username);
-		if (userInfo.getPassword().equals(password)) {
+		if (null!=userInfo && userInfo.getPassword().equals(password)) {
 			return true;
 		}else{
 		return false;

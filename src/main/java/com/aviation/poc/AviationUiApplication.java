@@ -24,6 +24,7 @@ public class AviationUiApplication extends SpringBootServletInitializer {
 		registrationBean.setFilter(new AviationLoginFilter());
 		registrationBean.setInitParameters(Collections.singletonMap("services.auth", authService));
 		registrationBean.addUrlPatterns("/");
+	
 
 		return registrationBean;
 	}
