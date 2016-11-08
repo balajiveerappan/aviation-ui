@@ -1,0 +1,57 @@
+spring:
+  data:
+    mongodb:
+      database: test
+      host: localhost
+      port: 27017
+---
+services:
+  auth: http://localhost:8080/login/redirect
+---
+info:
+  component: Zuul Server
+---
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+---      
+zuul:
+  routes:
+    settings: 
+      path: /settings/**
+      service-id: settings_service
+    components: 
+      path: /components/**
+      service-id: components_service
+
+    oldaviation: 
+      path: /aviation/**
+      service-id: aviation
+      
+    splashScreen:
+      path: /splashScreen
+      service-id: aviation      
+ 
+    splashScreenMFG:
+      path: /splashScreenMFG
+      service-id: aviation
+
+    splashScreenTail:
+      path: /splashScreenTail
+      service-id: aviation      
+            
+    splashScreenCPNSerial:
+      path: /splashScreenCPNSerial
+      service-id: aviation
+              
+    zuulserver: /self/**
+---
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
+          
