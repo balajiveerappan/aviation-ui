@@ -47,6 +47,18 @@ zuul:
     splashScreenCPNSerial:
       path: /splashScreenCPNSerial
       service-id: aviation
+
+    getFilters:
+      path: /getFilters
+      service-id: aviation
+     
+    loadComponent:
+      path: /loadComponent
+      service-id: aviation
+              
+    postComponentIds:
+      path: /postComponentIds/*/**
+      service-id: aviation
               
     zuulserver: /self/**
 ---
