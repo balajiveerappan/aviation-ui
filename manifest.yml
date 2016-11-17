@@ -1,0 +1,10 @@
+applications:
+- name: aviation-ui
+  memory: 512MB
+  host: aviation-ui-service
+  path: target/aviation-ui-0.0.1-SNAPSHOT.jar
+  env:
+    spring.profiles.active: cloud
+  services:
+  - eureka
+  - mongoinstance
