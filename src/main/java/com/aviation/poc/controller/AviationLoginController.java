@@ -22,7 +22,7 @@ public class AviationLoginController {
 	}
 	
 	@RequestMapping(value="/login", method=RequestMethod.POST)
-	public String loginView(@RequestParam("username") String username,@RequestParam("password") String password, HttpServletResponse response) {
+	public String loginView(@RequestParam(required=false, name="username") String username,@RequestParam(required=false, name="password") String password, HttpServletResponse response) {
 		boolean loginValidRes =  loginService.validateLogin(username, password);
 		if(loginValidRes){
 			return "dashboard";
@@ -35,4 +35,17 @@ public class AviationLoginController {
 	public String redirect(){
 		return "login";
 	}
+	
+	
+	@RequestMapping("/logout")
+	public String logout(){
+		return "login";
+	}
+	
+	@RequestMapping(value="/home", method=RequestMethod.GET)
+	public String home(){
+		
+		return "dashboard";
+	}
+	
 }
