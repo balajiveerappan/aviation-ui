@@ -1,0 +1,80 @@
+endpoints:
+    health:
+        sensitive: false
+    restart:
+        enabled: true
+    shutdown:
+        enabled: true
+info:
+    component: Zuul Server
+zuul:
+    routes:
+        filters:
+            path: /filter
+            service-id: aviation-settings
+        getFilters:
+            path: /getFilters
+            service-id: aviation-settings
+        getSplashDate:
+            path: /getSplashDate
+            service-id: aviation-settings
+        loadComponent:
+            path: /loadComponent
+            service-id: aviation-settings
+        navigationToRemoval:
+            path: /navigationToRemoval
+            service-id: aviation-settings
+        navigationToRemoval-ui:
+            path: /navigationToRemoval-ui
+            service-id: aviation-component-ui
+        oldaviation:
+            path: /aviation-ui/**
+            service-id: aviation-ui
+        paginationStatus:
+            path: /paginationStatus
+            service-id: aviation-component-ui
+        postComponentIds:
+            path: /postComponentIds
+            service-id: aviation-component-ui
+        removalReport:
+            path: /removalReport
+            service-id: aviation-component-ui
+        settings:
+            path: /aviation-settings/**
+            service-id: aviation-settings
+        settingsjs:
+            path: /js/settings.js
+            service-id: aviation-settings
+        splash:
+            path: /splash
+            service-id: aviation-settings
+        splashScreen:
+            path: /splashScreen
+            service-id: aviation-settings
+        test:
+            path: /test
+            service-id: aviation-component-ui
+        testhtml:
+            path: /test.html
+            service-id: aviation-component-ui
+        testjs:
+            path: /js/test.js
+            service-id: aviation-component-ui
+        triangle:
+            path: /img/triangle.png
+            service-id: aviation-component-ui
+        unitfiltercss:
+            path: /css/unitFilter.css
+            service-id: aviation-settings
+        unitjs:
+            path: /js/unit.js
+            service-id: aviation-settings
+        utilityjs:
+            path: /js/Utility.js
+            service-id: aviation-settings
+---
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
+      

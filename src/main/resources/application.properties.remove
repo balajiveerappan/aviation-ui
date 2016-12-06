@@ -1,5 +1,3 @@
-
-services.auth=http://localhost:8080/login/redirect
 info.component=Zuul Server
 
 endpoints.restart.enabled=true
@@ -31,10 +29,10 @@ zuul.routes.navigationToRemoval-ui.service-id=aviation-component-ui
 
 
 zuul.routes.getFilters.path=/getFilters
-zuul.routes.getFilters.service-id=aviation-settings  
+zuul.routes.getFilters.service-id=aviation-settings
 
 zuul.routes.filters.path=/filter
-zuul.routes.filters.service-id=aviation-settings  
+zuul.routes.filters.service-id=aviation-settings
 
 zuul.routes.utilityjs.path=/js/Utility.js
 zuul.routes.utilityjs.service-id=aviation-settings
@@ -43,10 +41,10 @@ zuul.routes.unitfiltercss.path=/css/unitFilter.css
 zuul.routes.unitfiltercss.service-id=aviation-settings
 
 zuul.routes.unitjs.path=/js/unit.js
-zuul.routes.unitjs.service-id=aviation-settings        
+zuul.routes.unitjs.service-id=aviation-settings
 
 zuul.routes.loadComponent.path=/loadComponent
-zuul.routes.loadComponent.service-id=aviation-settings  
+zuul.routes.loadComponent.service-id=aviation-settings
 
 
 zuul.routes.postComponentIds.path=/postComponentIds
@@ -60,19 +58,16 @@ zuul.routes.testjs.service-id=aviation-component-ui
 
 
 zuul.routes.removalReport.path=/removalReport
-zuul.routes.removalReport.service-id=aviation-component-ui 
+zuul.routes.removalReport.service-id=aviation-component-ui
 
 zuul.routes.triangle.path=/img/triangle.png
-zuul.routes.triangle.service-id=aviation-component-ui 
+zuul.routes.triangle.service-id=aviation-component-ui
 
 zuul.routes.paginationStatus.path=/paginationStatus
-zuul.routes.paginationStatus.service-id=aviation-component-ui 
+zuul.routes.paginationStatus.service-id=aviation-component-ui
 
 zuul.routes.splash.path=/splash
 zuul.routes.splash.service-id=aviation-settings
 
 zuul.routes.test.path=/test
 zuul.routes.test.service-id=aviation-component-ui
-
-
-
