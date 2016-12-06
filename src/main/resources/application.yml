@@ -77,4 +77,9 @@ logging:
   level:
     ROOT: INFO
     org.springframework.web: DEBUG
+---
+spring:
+  data:
+    mongodb:
+      uri: ${cloud.services.mongodb.connection.uri:mongodb://localhost:27017/test}    
       
