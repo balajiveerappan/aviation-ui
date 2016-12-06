@@ -21,8 +21,8 @@ public class BootMongoDB implements CommandLineRunner {
 		loginRepository.deleteAll();
 		System.out.println("Inside Run method");
 		Login login = new Login();
-		login.setUsername("amit");
-		login.setPassword("amit");
+		login.setUsername("capgemini");
+		login.setPassword("capgemini");
 		loginRepository.save(login);
 	}
 
