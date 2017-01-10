@@ -72,25 +72,33 @@ zuul:
         utilityjs:
             path: /js/Utility.js
             service-id: aviation-settings
+        saveFilter:
+            path: /saveFilter
+            service-id: aviation-settings
+        updateFilter:
+            path: /updateFilter
+            service-id: aviation-settings
 ---
 logging:
   level:
     ROOT: INFO
     org.springframework.web: DEBUG
 ---
+server:
+  context-path: /
+---
 spring:
-  data:
-    mongodb:
-      uri: ${cloud.services.mongodb.connection.uri:mongodb://localhost:27017/test}
+  profiles: local
+  jpa:
+    hibernate:
+      ddl-auto: update
 ---
-hystrix:
-  command:
-    default:
-      execution:
-        timeout:
-          enabled: false
+spring:
+  profiles: local, cloud
+  datasource:
+    url: ${cloud.services.postgres-sql.connection.jdbcUrl:jdbc:mysql://localhost:3306/ad_f33ba6ada231ff9?useSSL=false&user=root&password=root}
 ---
-eureka:
+ eureka:
   instance:
     non-secure-port-enabled: false
     secure-port-enabled: true
@@ -104,3 +112,20 @@ eureka:
     service-url:
       defaultZone: ${vcap.services.eureka.credentials.url:http://localhost:8761/eureka/}          
       
+---
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+
+---
+ spring:
+  jpa:
+    properties:
+      hibernate.dialect:
+        org.hibernate.dialect.PostgreSQLDialect 
+  http:
+    multipart:
+      max-request-size: 10Mb
